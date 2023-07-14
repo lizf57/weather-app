@@ -11,7 +11,33 @@
 </head>
 
 <body>
-    
+    <header>
+        <h1 class="bg-primary text-white text-end">Weather Dashboard🌦️</h1>
+    </header>
+
+    <main class="main">
+        <div class="container-fluid">
+            <div class="row page-content">
+        <!-- column 1 with search for city -->
+                <div class="col-sm-4 bg-light p-0">
+                    <div class="form-container">
+                        <!-- enter city with search button -->
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Enter a city here" aria-label="Search">
+                            <button class="btn btn-outline-dark" type="submit">Search</button>
+                        </form>
+                        <!-- search history saved under search button -->
+                        <div id="search-history-container" class="search-history-container">
+                    </div>
+                </div>
+
+        <!-- column 2 current city/weather and the 5-day forecase below -->
+
+            </div>
+        </div>
+    </main>
+
+
 
 
 
