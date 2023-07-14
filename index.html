@@ -14,27 +14,132 @@
     <header>
         <h1 class="bg-primary text-white text-end">Weather Dashboard🌦️</h1>
     </header>
-
-    <main class="main">
-        <div class="container-fluid">
-            <div class="row page-content">
-        <!-- column 1 with search for city -->
-                <div class="col-sm-4 bg-light p-0">
-                    <div class="form-container">
-                        <!-- enter city with search button -->
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Enter a city here" aria-label="Search">
-                            <button class="btn btn-outline-dark" type="submit">Search</button>
-                        </form>
-                        <!-- search history saved under search button -->
-                        <div id="search-history-container" class="search-history-container">
-                    </div>
-                </div>
+    <!-- column 1 with search for city -->
+    <div id="fullpage">    
+        <section id="navbar" class="search-section">
+          <div class="form-container">
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Enter a city here" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section> 
 
         <!-- column 2 current city/weather and the 5-day forecase below -->
-
+        <section id="display-weather" class="col-12 col-lg-9 mt-3 d-flex flex-column">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title d-flex align-items-center" style="height: 150px">
+                        <span id="currentCity">City Searched</span>
+                        <span class="px-3" id="currentDate">MM/DD/YY</span>
+                        <img class="icon" id="currentWeatherIcon" src=""></img>
+                    </h2>
+                    <p class="card-text">
+                        Temperature: 
+                        <spn id="todayTemp"></spn>
+                    </p>
+                    <p class="card-text">
+                        Wind Speed: 
+                        <spn id="todayWind"></spn>
+                    </p>
+                    <p class="card-text">
+                        Humidity: 
+                        <spn id="todayHumid"></spn>
+                    </p>
+                </div>
             </div>
-        </div>
+            <div class="px-5">
+                <h2 class="card-title d-flex align-items-center mt-3" style="height: 75px">5-Day Forecast: </h2>
+                <div class="row justify-content-between">
+                    <div class="card-body col-sm-2 bg-primary text-white rounded m-2">
+                        <p class="card-title" id="dayOne">MM/DD/YY</p>
+                        <p class="card-text" style="height: 75px">
+                            <img class="icon" id="weatherIconOne" src="">
+                        </p>
+                        <p class="card-text">Temperature: 
+                            <span id="tempOne"> </span>
+                        </p>
+                        <p class="card-text"> Wind Speed: 
+                            <span id="windOne"> </span>
+                        </p>
+                        <p class="card-text"> Humidity:
+                            <span id="humidOne"> </span>
+                        </p>
+                    </div>
+
+                    <div class="card-body col-sm-2 bg-primary text-white rounded m-2">
+                        <p class="card-title" id="dayOne">MM/DD/YY</p>
+                        <p class="card-text" style="height: 75px">
+                            <img class="icon" id="weatherIconTwo" src="">
+                        </p>
+                        <p class="card-text">Temperature: 
+                            <span id="tempTwo"> </span>
+                        </p>
+                        <p class="card-text"> Wind Speed: 
+                            <span id="windTwo"> </span>
+                        </p>
+                        <p class="card-text"> Humidity:
+                            <span id="humidTwo"> </span>
+                        </p>
+                    </div>
+
+                    <div class="card-body col-sm-2 bg-primary text-white rounded m-2">
+                        <p class="card-title" id="dayOne">MM/DD/YY</p>
+                        <p class="card-text" style="height: 75px">
+                            <img class="icon" id="weatherIconThree" src="">
+                        </p>
+                        <p class="card-text">Temperature: 
+                            <span id="tempThree"> </span>
+                        </p>
+                        <p class="card-text"> Wind Speed: 
+                            <span id="windThree"> </span>
+                        </p>
+                        <p class="card-text"> Humidity:
+                            <span id="humidThree"> </span>
+                        </p>
+                    </div>
+
+                    <div class="card-body col-sm-2 bg-primary text-white rounded m-2">
+                        <p class="card-title" id="dayOne">MM/DD/YY</p>
+                        <p class="card-text" style="height: 75px">
+                            <img class="icon" id="weatherIconFour" src="">
+                        </p>
+                        <p class="card-text">Temperature: 
+                            <span id="tempFour"> </span>
+                        </p>
+                        <p class="card-text"> Wind Speed: 
+                            <span id="windFour"> </span>
+                        </p>
+                        <p class="card-text"> Humidity:
+                            <span id="humidFour"> </span>
+                        </p>
+                    </div>
+
+                    <div class="card-body col-sm-2 bg-primary text-white rounded m-2">
+                        <p class="card-title" id="dayOne">MM/DD/YY</p>
+                        <p class="card-text" style="height: 75px">
+                            <img class="icon" id="weatherIconFive" src="">
+                        </p>
+                        <p class="card-text">Temperature: 
+                            <span id="tempFive"> </span>
+                        </p>
+                        <p class="card-text"> Wind Speed: 
+                            <span id="windFive"> </span>
+                        </p>
+                        <p class="card-text"> Humidity:
+                            <span id="humidFive"> </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+             
+
+            
     </main>
 
 
