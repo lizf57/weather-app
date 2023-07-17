@@ -43,20 +43,21 @@ function getApi(inputValue) {
         todayTemp.innerText=weatherInfo.main.temp + " F"
         
         var todayWind = document.querySelector("#todayWind")
-        todayWind.innerText = weatherInfo.wind.speed + " mph"
+        todayWind.innerText = weatherInfo.wind.speed + " MPH"
 
         var todayHumid = document.querySelector("#todayHumid")
-        todayHumid.innerText = weatherInfo.main.humidity + " "
+        todayHumid.innerText = weatherInfo.main.humidity + " %"
+
+        let date = new Date().toLocaleDateString();
+        currentDate.innerText = date
+        console.log(date)
+      
     })
 };
 
-// var date = dayjs.format('MMM D, YYYY');
-// currentDate.innerText = date
 
 
-// let date = new Date().toJSON().split("T")[0];
-// currentDate.innerText = date
-// console.log(date)
+
 
 // https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
 
