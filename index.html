@@ -21,13 +21,16 @@
     <!-- column 1 with search for city -->
     <div id="fullpage">    
         <section id="navbar" class="search-section">
-          <div class="form-container">
+          <div class="search-container">
             <div class="row">
               <div class="col-12 col-md-4">
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Enter a city here" aria-label="Search">
+                    <input class="inputValue me-2" type="search" placeholder="Enter a city here" aria-label="Search">
                     <button class="btn btn-outline-dark" type="submit">Search</button>
                 </form>
+                <div id="search-history-container" class="searchHistory">
+                    
+                </div>
               </div>
             </div>
           </div>
@@ -37,11 +40,11 @@
         <section id="display-weather" class="col-12 col-lg-9 mt-3 d-flex flex-column">
             <div class="card m-5 shadow-lg rounded">
                 <div class="card-body">
-                    <h2 class="card-title d-flex" style="height: 150px">
-                        <span id="currentCity">City Searched</span>
-                        <span class="px-3" id="currentDate">MM/DD/YY</span>
+                    <h3 class="card-title d-flex" style="height: 150px">
+                        <p id="currentCity" class="currentCity">city searched</p>
+                        <p class="currentDate px-3" id="currentDate">date </p>
                         <img class="icon" id="currentWeatherIcon" src=""></img>
-                    </h2>
+                    </h3>
                     <p class="card-text">
                         Temperature: 
                         <spn id="todayTemp"></spn>
@@ -143,6 +146,10 @@
             </div>
         </section>
     </main>
+    <!-- day js -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"></script>
     <!-- bootstrap for JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <!-- javascript -->
