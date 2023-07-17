@@ -12,8 +12,9 @@ searchButton.addEventListener('click', function (event) {
     event.preventDefault()
 
     var inputValue = document.querySelector('.inputValue').value
-    getApi(inputValue)
-    let searchHistory = JSON.parse(localStorage.getItem("history")) || []
+    getCurrentWeather(inputValue)
+    getForecast(inputValue)
+    let searchHistory = JSON.parse(localStorage.getItem("history")) 
     searchHistory.push({
       city:inputValue
     })
@@ -24,7 +25,7 @@ searchButton.addEventListener('click', function (event) {
 
 
 // When I view current weather conditions for that city, I'm presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed
-function getApi(inputValue) {
+function getCurrentWeather(inputValue) {
     fetch("https://api.openweathermap.org/data/2.5/weather?q=" + inputValue + "&units=imperial&appid=" + apiKey)
     .then(function(response){
         return response.json()
@@ -49,20 +50,26 @@ function getApi(inputValue) {
         todayHumid.innerText = weatherInfo.main.humidity + " %"
 
         let date = new Date().toLocaleDateString();
-        currentDate.innerText = date
+        currentDate.innerText = "( " + date + " )" 
         console.log(date)
       
     })
 };
 
 
-
-
-
-// https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
-
-
 // When I view future weather conditions for that city, I'm presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity.
+function getForecast(inputValue) {
+    fetch(" https://api.openweathermap.org/data/2.5/forecast?q=" + inputValue + "&units=imperial&appid=" + apiKey)
+    .then(function(response){
+        return response.json()
+    }) 
+    .then(function(forecastInfo){
+    // 5 objects from list
+        // update DOM
+    console.log(forecastInfo) 
+    })
+};
+
 
 
 // When I click on a city in the search history, I'm presented with current and future conditions for that city.
