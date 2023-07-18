@@ -23,7 +23,7 @@ SO THAT I can plan a trip accordingly
 
 #
 
-Link to deploy application: 
+Link to deploy application: https://lizf57.github.io/weather-app/ 
 
 ## Mock-Up
 ![Project Screenshot](./images/Screenshot-weather%20.png)
