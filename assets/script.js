@@ -23,7 +23,6 @@ searchButton.addEventListener('click', function (event) {
   });
 
 
-
 // When I view current weather conditions for that city, I'm presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed
 function getCurrentWeather(inputValue) {
     fetch("https://api.openweathermap.org/data/2.5/weather?q=" + inputValue + "&units=imperial&appid=" + apiKey)
@@ -69,7 +68,6 @@ function getForecast(inputValue) {
     console.log(forecastInfo) 
     })
 };
-
 
 
 // When I click on a city in the search history, I'm presented with current and future conditions for that city.
