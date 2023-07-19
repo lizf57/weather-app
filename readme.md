@@ -27,3 +27,8 @@ Link to deploy application: https://lizf57.github.io/weather-app/
 
 ## Mock-Up
 ![Project Screenshot](./images/Screenshot-weather%20.png)
+
+## Resources
+
+- Open Weather API
+    https://openweathermap.org/api 
