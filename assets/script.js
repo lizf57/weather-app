@@ -44,7 +44,7 @@ function getCurrentWeather(inputValue) {
         todayHumid.innerText = weatherInfo.main.humidity + " %"
 
         let date = new Date().toLocaleDateString();
-        currentDate.innerText = "( " + date + " )" 
+        currentDate.innerText = date  
       
     })
 };
@@ -62,9 +62,12 @@ function updateForecastCards(forecastInfo) {
         let cardListObject = cardList[i]
         var card = cardForecastContainer[i]
         
-        card.querySelector(".date").innerText = "( " + cardListObject.dt_txt.split(" ")[0] + " )"
+        card.querySelector(".date").innerText = cardListObject.dt_txt.split(" ")[0]
+
         card.querySelector(".temp").innerText = cardListObject.main.temp + " F"
+
         card.querySelector(".wind").innerText = cardListObject.wind.speed + " MPH"
+
         card.querySelector(".humid").innerText = cardListObject.main.humidity + " %"
         
     }
@@ -78,11 +81,24 @@ function getForecast(inputValue) {
         return response.json()
     }) 
     .then(function(forecastInfo){
-    
         updateForecastCards(forecastInfo)
-
     })
 };
 
 
 // When I click on a city in the search history, I'm presented with current and future conditions for that city.
+
+var historyList = document.querySelector(".searchHistory")
+console.log(historyList)
+
+for (let i=0; i<historyList.length; i++){
+    var citiesSearched = historyList[i];
+    console.log(citiesSearched)
+
+    citiesSearched.addEventListener('click', function(){
+        var list = citiesSearched.querySelector("p").innerText
+        console.log(list)
+
+        localStorage.setItem(historyList, citiesSearched)
+    })
+};

@@ -14,21 +14,27 @@
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
 
-<body class="bg-light">
+<body>
     <header>
         <h1 class="bg-primary fw-bold text-white text-end">Weather Dashboard🌦️</h1>
     </header>
     <!-- column 1 with search for city -->
-    <div id="fullpage">    
+    <div id="fullpage">   
+        <video id="videoBackground" autoplay loop muted playsinline>
+            <source src="./images-videos/weather_background.mp4" type="video/mp4">
+          </video> 
         <section id="navbar" class="search-section">
           <div class="search-container">
             <div class="row">
               <div class="col-12 col-md-4">
                 <form class="d-flex" role="search">
                     <input class="inputValue me-2" type="search" placeholder="Enter a city here" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                    <button class="btn btn-outline-dark bg-light" type="submit">Search</button>
                 </form>
                 <div id="search-history-container" class="searchHistory">
+                    <div>
+                     <p></p>
+                    </div>
                     
                 </div>
               </div>
@@ -40,7 +46,7 @@
         <section id="display-weather" class="col-12 col-lg-9 mt-3 d-flex flex-column">
             <div class="card m-5 shadow-lg rounded">
                 <div class="card-body">
-                    <h3 class="card-title d-flex" style="height: 150px">
+                    <h3 class="card-title d-flex" style="height: 90px">
                         <p id="currentCity" class="currentCity fw-bold">City: </p>
                         <p class="currentDate fw-bold px-3" id="currentDate">Date: </p>
                         <img class="icon" id="currentWeatherIcon" src=""></img>
