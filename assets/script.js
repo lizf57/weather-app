@@ -91,8 +91,8 @@ function getForecast(inputValue) {
 
 var historyList = JSON.parse(localStorage.getItem("history")) || []
 
-for (let i=0; i<10; i++){
-    var citiesSearched = historyList[i].city 
+for (let i=0; i<7; i++){
+    var citiesSearched = historyList[i].city
     console.log(citiesSearched)
 
     let searchHistoryButton = document.createElement('button')

@@ -33,6 +33,13 @@ h1 {
     margin-left: 10px;
 }
 
+#search-history-container {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+}
+
 .card-body {
     opacity: 75%;
     padding: 10px;
