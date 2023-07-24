@@ -26,7 +26,7 @@ SO THAT I can plan a trip accordingly
 Link to deploy application: https://lizf57.github.io/weather-app/ 
 
 ## Mock-Up
-![Project Screenshot](./images-videos/readme-screenshot.png)
+![Project Screenshot](./assets/images-videos/readme-screenshot.png)
 
 ## Resources
 

@@ -18,13 +18,14 @@
     <header>
         <h1 class="bg-primary fw-bold text-white text-end">Weather Dashboard🌦️</h1>
     </header>
-    <!-- column 1 with search for city -->
+
     <div id="fullpage">   
+        <!-- background video -->
         <video id="videoBackground" autoplay loop muted playsinline>
-            <source src="./images-videos/weather_background.mp4" type="video/mp4">
+            <source src="./assets/images-videos/weather_background.mp4" type="video/mp4">
           </video> 
 
-       
+           <!-- column 1 with search for city -->
         <section id="navbar" class="search-section">
           <div class="search-container">
             <div class="row">
@@ -34,9 +35,6 @@
                     <button class="btn btn-outline-dark bg-light" type="submit">Search</button>
                 </form>
                 <div id="search-history-container" class="searchHistory">
-                    <div>
-                     <p></p>
-                    </div>
                     
                 </div>
               </div>
@@ -67,7 +65,7 @@
                     </p>
                 </div>
             </div>
-            <!-- 5 cards -->
+            <!-- 5 forecast cards -->
             <div class="px-5" id="card-forecast-container">
                 <h2 class="card-title d-flex align-items-center mt-3" style="height: 75px">5-Day Forecast: </h2>
                 <div class="row justify-content-between">

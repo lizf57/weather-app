@@ -7,7 +7,7 @@ var cardForecastContainer = document.querySelectorAll("#card-forecast-container 
 var searchButton = document.querySelector('.btn')
 var currentCity = document.querySelector('.currentCity')
 var currentDate = document.querySelector('#currentDate')
-var currentWeatherIcon = document.querySelector('#currentWeatherIcon')
+var icon = document.querySelectorAll('.icon')
 
 searchButton.addEventListener('click', function (event) {
     event.preventDefault()
@@ -33,6 +33,7 @@ function getCurrentWeather(inputValue) {
     .then(function(weatherInfo){
       
         currentCity.innerText = weatherInfo.name
+
         
         var todayTemp = document.querySelector("#todayTemp")
         todayTemp.innerText=weatherInfo.main.temp + " F"
@@ -88,17 +89,18 @@ function getForecast(inputValue) {
 
 // When I click on a city in the search history, I'm presented with current and future conditions for that city.
 
-var historyList = document.querySelector(".searchHistory")
-console.log(historyList)
+var historyList = JSON.parse(localStorage.getItem("history")) || []
 
-for (let i=0; i<historyList.length; i++){
-    var citiesSearched = historyList[i];
+for (let i=0; i<10; i++){
+    var citiesSearched = historyList[i].city 
     console.log(citiesSearched)
 
-    citiesSearched.addEventListener('click', function(){
-        var list = citiesSearched.querySelector("p").innerText
-        console.log(list)
+    let searchHistoryButton = document.createElement('button')
+        searchHistoryButton.innerText = citiesSearched
 
-        localStorage.setItem(historyList, citiesSearched)
-    })
+        searchHistoryButton.addEventListener("click", function(event){
+            getCurrentWeather(event.target.innerText)
+            getForecast(event.target.innerText)
+        });
+    document.querySelector(".searchHistory").append(searchHistoryButton)
 };
