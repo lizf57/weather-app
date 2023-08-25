@@ -5,7 +5,7 @@
 }
 
 header {
-    opacity: 80%;
+    opacity: 75%;
 }
 
 #videoBackground {
@@ -29,6 +29,7 @@ h1 {
 }
 
 .search-container {
+    opacity: 85%;
     display: flex;
     margin-left: 10px;
 }
@@ -46,7 +47,7 @@ h1 {
 }
 
 #display-weather {
-    opacity: 90%;
+    opacity: 85%;
     float: right;
     margin-bottom: 15px;
 }
