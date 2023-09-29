@@ -7,7 +7,7 @@ For this week's challenge, I created a weather dashboard that retrieves data fro
 Link to deploy application: https://lizf57.github.io/weather-app/ 
 
 
-![Project Screenshot](./assets/images-videos/screenshot.png)
+![Project Screenshot](/assets/images-videos/screenshot.png)
 
 
 
