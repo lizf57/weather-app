@@ -1,34 +1,24 @@
-# Weather Dashboard ⛅️
+# Challenge 6: Weather Dashboard ⛅️
 
-## Challenge 6: Server-Side APIs
+## Description
 
-For this week's challenge, I created a weather dashboard that retrieves data from a third-party API using HTML, CSS, Javascript, Bootstrap, and the Open Weather API.
-
-#
-
-## User Story
-AS A traveler
-<br>
-I WANT to see the weather outlook for multiple cities
-<br>
-SO THAT I can plan a trip accordingly
-
-#
-
-## Acceptance Criteria
-- When I search for a city, I'm presented with current and future conditions for that city, and that city is added to the search history.
-- When I view current weather conditions for that city, I'm presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed.
-- When I view future weather conditions for that city, I'm presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity.
-- When I click on a city in the search history, I'm presented with current and future conditions for that city.
-
-#
+For this week's challenge, I created a weather dashboard that retrieves data from a third-party API using HTML, CSS, Javascript, Bootstrap, and the Open Weather API. 
 
 Link to deploy application: https://lizf57.github.io/weather-app/ 
 
-## Mock-Up
-![Project Screenshot](./assets/images-videos/readme-screenshot.png)
+
+![Project Screenshot](./assets/images-videos/screenshot.png)
+
+
+
 
 ## Resources
-
 - Open Weather API
     https://openweathermap.org/api 
+
+## Contributions
+There were no other contributors to this application. This application was initiated as a project from the University of Wisconsin Coding Bootcamp.  
+
+## Questions
+If you have any questions contact the developer here:
+L. Friedman:   [GitHub](https://github.com/lizf57)
