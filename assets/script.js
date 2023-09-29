@@ -15,12 +15,16 @@ searchButton.addEventListener('click', function (event) {
     var inputValue = document.querySelector('.inputValue').value
     getCurrentWeather(inputValue)
     getForecast(inputValue)
-    let searchHistory = JSON.parse(localStorage.getItem("history")) 
-    searchHistory.push({
+    let searchHistory = JSON.parse(localStorage.getItem("history")) || []
+
+    searchHistory = searchHistory.slice(0,3)
+    searchHistory.unshift({
       city:inputValue
     })
     localStorage.setItem("history", JSON.stringify(searchHistory))
+    document.querySelector('.inputValue').value = ""
 
+    generateHistoryButtons()
   });
 
 
@@ -86,21 +90,42 @@ function getForecast(inputValue) {
     })
 };
 
-
 // When I click on a city in the search history, I'm presented with current and future conditions for that city.
 
-var historyList = JSON.parse(localStorage.getItem("history")) || []
-
-for (let i=0; i<5; i++){
-    var citiesSearched = historyList[i]
-    console.log(citiesSearched)
-
+function generateHistoryBtn(city){
+  
     let searchHistoryButton = document.createElement('button')
-        searchHistoryButton.innerText = citiesSearched
-
+        searchHistoryButton.innerText = city
+    
         searchHistoryButton.addEventListener("click", function(event){
             getCurrentWeather(event.target.innerText)
             getForecast(event.target.innerText)
         });
     document.querySelector(".searchHistory").append(searchHistoryButton)
+}
+
+function generateHistoryButtons(){
+
+    document.querySelector(".searchHistory").innerHTML = ""
+    
+    var historyList = JSON.parse(localStorage.getItem("history")) || [];
+
+    for (let i=0; i<historyList.length; i++){
+        var city = historyList[i].city
+        console.log(city)
+        generateHistoryBtn(city)
+    }
 };
+
+generateHistoryButtons()
+
+// historyList.forEach(function(city) {
+//   let searchHistoryButton = document.createElement('button');
+//   searchHistoryButton.innerText = city;
+  
+//   searchHistoryButton.addEventListener("click", function(event) {
+//     getCurrentWeather(event.target.innerText);
+//     getForecast(event.target.innerText);
+//   });
+//   document.querySelector(".searchHistory").append(searchHistoryButton);
+// });
